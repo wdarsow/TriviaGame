@@ -8,23 +8,89 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href=".\assets\css\style.css">
+    <!--jQuery CDN link-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+    <script src=".\assets\javascript\app.js"></script>
 </head>
 <body>
     <div class="container">
+        
         <div class="row">
             <div class="col-sm">
                 <h1 class="title">Wade's Trivia Game</h1>
             </div>
         </div>
+        
         <div class="row">
-            <div class="col-sm"></div>
+            <div class="col-sm">
                 <h1 class="start">Let's get started!</h1>
+            </div>
         </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 start-btn">
+                <button type="button" class="btn btn-primary" id="start">Start!</button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <br>
+        
+        <div class="row maindivclass" id="main-div"></div>
+        <br>
+        <div class="row question-class">
+                <div class="col-sm">
+                    <form id="radioQuestion1">
+                        <P>Which of these statements declares a block scope local variable?</P>
+                        <input type="radio" class="q1" id="jsQuestion1" name="radioquestion" value="let">
+                        <label for="jsQuestion1">Let</label>
+                        <input type="radio" class="q1" id="jsQuestion12" name="radioquestion" value="const">
+                        <label for="jsQuestion12">Const</label>
+                        <input type="radio" class="q1" id="jsQuestion13" name="radioquestion" value="var">
+                        <label for="jsQuestion13">Var</label>
+                        <input type="radio" class="q1" id="jsQuestion14" name="radioquestion" value="other">
+                        <label for="jsQuestion14">Other</label>
+                    </form>
+                </div>
+        </div>
+        <br>
+        <div class="row question-class">
+            <div class="col-sm">
+                <form id="radioQuestion2">
+                    <P>What does NaN stand for in JavaScript?</P>
+                    <input type="radio" class="q2" id="jsQuestion2" name="radioquestion2" value="notanothing">
+                    <label for="jsQuestion2">Not a Nothing</label>
+                    <input type="radio" class="q2" id="jsQuestion21" name="radioquestion2" value="notanothernumber">
+                    <label for="jsQuestion21">Not another Number</label>
+                    <input type="radio" class="q2" id="jsQuestion22" name="radioquestion2" value="notanumber">
+                    <label for="jsQuestion22">Not a Number</label>
+                    <input type="radio" class="q2" id="jsQuestion23" name="radioquestion2" value="other">
+                    <label for="jsQuestion23">Other</label>
+                </form>
+            </div>
+
+        </div>
+
+        <br>
+        <div class="row question-class" id="questionid2"></div>
+        <br>
+        <div class="row question-class" id="questionid3"></div>
+        <br>
+        <div class="row question-class" id="questionid4"></div>
+        <br>
+        <div class="row question-class" id="questionid5"></div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 done-btn">
+                <button type="button" class="btn btn-primary" id="done">Done!</button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+
     </div>
-    
-    <!--jQuery CDN link-->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

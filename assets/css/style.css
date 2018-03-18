@@ -8,6 +8,30 @@ h1.start {
     color: white;
 }
 
+.container {
+    border: solid 2px yellow;
+}
+
 body {
     background-image: url("../images/background.jpg");
+}
+
+.start-btn {
+    text-align: center;
+/*  border: solid 2px yellow; */
+}
+
+.done-btn {
+    text-align: center;
+/*  border: solid 2px yellow; */
+}
+
+.maindivclass {
+    text-align: center;
+    font-weight: bold;
+/*  border: solid 2px yellow; */
+}
+
+p {
+    font-weight: bold;
 }

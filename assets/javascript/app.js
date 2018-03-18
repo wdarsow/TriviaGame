@@ -1,121 +1,133 @@
 'use strict';
 
-//Variables used for the final summary page. All Done!
+//Variables
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 let unAnswered = 0;
-
-let timeOut = 5;
+let timeOut = 60;
 let intervalValue;
 
-//const varQuestion;
-
-//JSON object questions
-/*const varQuestion1 = {"question1":[
-    {"ans1":"let"},
-    {"ans2":"var"},
-    {"ans3":"const"}
-    {"ans4":"verb"}
-]}*/
-
-// When the document is ready add the note to the console.log and hide the Done button.
+// When the document is ready perform these tasks
 $(document).ready(function() {
     console.log("document is ready");
     $("#done").hide();
     $("#radioQuestion1").hide();
     $("#radioQuestion2").hide();
-  
+    $("#radioQuestion3").hide();
+    $("#radioQuestion4").hide();
+    $("#summary1").hide();
+    $("#summary2").hide();
+    $("#summary3").hide();
+    $("#summary4").hide();
+
 //Functions
 const mainFunction = function() {
-    //console.log("starting");
     clearInterval(intervalValue);
     intervalValue = setInterval(reduce, 1000);
-    //console.log("mainfunction running" + intervalValue);
 };
 
 const reduce = function() {
-    //console.log("reduce running" + intervalValue);
     timeOut = timeOut - 1;
     $("#main-div").html("Time Left: " + timeOut);
-    //$("#main-div").html(`<div class="row">${timeOut}</div>`)
     if(timeOut === 0) {
         stop();
-        console.log("time is up");
+        allDone();
     }
 }
 
 const stop = function() {
     clearInterval(intervalValue);
-    //console.log(intervalValue);
 }
 
-const createQuestions = function() {
-    console.log("createQuestions starting");
-    $("#questionid").append(`<div class="row q1"> "Question1" </div>`);
-    $("#questionid").append(`<div class="row q2"> "Question2" </div>`);
-}
-
-// Buttons
+// Button
 $("#start").click(function() {
     $("#start").hide();
-    //$("#main-div").html("Time Remaining: ");
     $("#radioQuestion1").show();
     $("#radioQuestion2").show();
+    $("#radioQuestion3").show();
+    $("#radioQuestion4").show();
     $("#done").show();
     mainFunction();
-    createQuestions();
 });
 
-$(".q1").click(function() {
-    console.log($(this).val());
-})
-
-//this functions checks the score and mainpulates the final document result page
+// These functions check answers and tally scores
 const scoreChecker1 = function() {
     if($("#jsQuestion1").is(':checked')) {
         correctAnswer++;
-        console.log("correct answer", correctAnswer);
     } else if($("#jsQuestion12").is(':checked'))  {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else if($("#jsQuestion13").is(':checked')) {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else if($("#jsQuestion14").is(':checked')) {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else {
         unAnswered++;
-        console.log("unanswered", unAnswered);
     }
+    scoreChecker2();
 }
 
 const scoreChecker2 = function() {
     if($("#jsQuestion22").is(':checked')) {
         correctAnswer++;
-        console.log("correct answer", correctAnswer);
     } else if($("#jsQuestion2").is(':checked'))  {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else if($("#jsQuestion21").is(':checked')) {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else if($("#jsQuestion23").is(':checked')) {
         incorrectAnswer++;
-        console.log("incorrect answer", incorrectAnswer);
     } else {
         unAnswered++;
-        console.log("unanswered", unAnswered);
+    }
+    scoreChecker3();
+}
+
+const scoreChecker3 = function() {
+    if($("#jsQuestion33").is(':checked')) {
+        correctAnswer++;
+    } else if($("#jsQuestion3").is(':checked'))  {
+        incorrectAnswer++;
+    } else if($("#jsQuestion31").is(':checked')) {
+        incorrectAnswer++;
+    } else if($("#jsQuestion32").is(':checked')) {
+        incorrectAnswer++;
+    } else {
+        unAnswered++;
+    }
+    scoreChecker4();
+}
+
+const scoreChecker4 = function() {
+    if($("#jsQuestion42").is(':checked')) {
+        correctAnswer++;
+    } else if($("#jsQuestion4").is(':checked'))  {
+        incorrectAnswer++;
+    } else if($("#jsQuestion41").is(':checked')) {
+        incorrectAnswer++;
+    } else if($("#jsQuestion43").is(':checked')) {
+        incorrectAnswer++;
+    } else {
+        unAnswered++;
     }
 }
 
+const allDone = function() {
+    scoreChecker1();
+    $("#radioQuestion1").hide();
+    $("#radioQuestion2").hide();
+    $("#radioQuestion3").hide();
+    $("#radioQuestion4").hide();
+    $("#done").hide();
+    $("#main-div").hide();
+    $("#summary1").show();
+    $("#summary2").html("Correct Answers: " + correctAnswer).show();
+    $("#summary3").html("Incorrect Answers: " + incorrectAnswer).show();
+    $("#summary4").html("Unanswered: " + unAnswered).show();
+    stop();
+}
 
 $("#done").click(function() {
-    scoreChecker1();
-    scoreChecker2();
-    console.log("hide dom elements and then show summary page instead")
-})
-
+    allDone();
+});
 
 })  
 
@@ -128,7 +140,7 @@ $("#start").click(function() {
     }, 5000); 
 });
 
-*/
+
 //const reduceTimeOut = function() {
 //    timeOut = timeOut - 1;
 //    $("#main-div").append(`<div class="row" ${timeout} </div>`);
@@ -137,3 +149,10 @@ $("#start").click(function() {
 //objects
 //Timer
 
+const createQuestions = function() {
+    console.log("createQuestions starting");
+    $("#questionid").append(`<div class="row q1"> "Question1" </div>`);
+    $("#questionid").append(`<div class="row q2"> "Question2" </div>`);
+}
+
+*/

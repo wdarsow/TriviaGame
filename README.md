@@ -14,4 +14,6 @@ Q: Where can you get help with my project?
 A: Please contact me if you need help with my project.
 
 Q: Who maintains and contributes to the project?
-A: I am the only person that is currently maintaining and contributing to this project.
+A: I am the only person that is currently maintaining and contributing to this project.  
+
+This game has been published to the following URL: https://wdarsow.github.io/TriviaGame/
